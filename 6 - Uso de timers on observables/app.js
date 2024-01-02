@@ -1,10 +1,10 @@
-const boton = document.querySelector('button');
+const buton = document.querySelector("button")
 
-boton.disabled = true;
+buton.disabled = true
 
-const timer = Rx.Observable.timer(3000);
+const timer = Rx.Observable.timer(3000)
 
 timer.subscribe(done => {
-    boton.disabled = false;
-    console.log('El botón se ha habilitado nuevamente')
+    buton.disabled = false
+    console.log(`El boton se ha habilitado nuevamente`);
 })
