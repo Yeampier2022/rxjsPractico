@@ -1,6 +1,6 @@
 const promesa = new Promise((resolve, reject) => {
 
-    fetch('http://httpstat.us/500')
+    fetch('https://pokeapi.co/api/v2/pokemon/ditto')
         .then(data => data.json())
         .then(jugadores => {
             console.log('Promesa resuelta');
@@ -16,4 +16,11 @@ const miObservable = Rx.Observable.fromPromise(promesa);
 
 miObservable.subscribe(resultados => {
     console.log('resultados', resultados);
+})
+
+
+const myObservable = Rx.Observable.fromPromise(promesa)
+
+myObservable.subscribe(resultado => {
+    console.log(`${resultado}`);
 })
